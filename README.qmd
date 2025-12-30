@@ -210,7 +210,7 @@ XGBoost was chosen to model more complex, nonlinear relationships in the data. E
 #| include: false
 df_dumb = pd.get_dummies(df, dtype = int, drop_first = True)
 y = df_dumb['expenses']
-X = df_dumb.drop(columns = 'expenses') 
+X = df_dumb.drop(columns = ['expenses','log_expenses']) 
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)
 ```
