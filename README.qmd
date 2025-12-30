@@ -1,5 +1,5 @@
 ---
-title: "Machine Learning Final Project - Predicting Healthcare Insurance Expenses with Machine Learning"
+title: "Predicting Healthcare Insurance Expenses with Machine Learning"
 format: gfm
 execute: 
   warning: false
@@ -31,8 +31,6 @@ import xgboost as xgb
 
 df = pd.read_csv("C:/Users/cbmch/Downloads/medical_insurance.csv")
 ```
-
-# Predicting Healthcare Insurance Expenses with Machine Learning
 
 ## Overview
 
@@ -107,15 +105,6 @@ Several visualizations were used to better understand the data:
 
 ```{python}
 #| echo: false
-
-g_1 = (ggplot(df,aes(x="expenses")) + geom_density(fill="blue", alpha=0.3) + theme_bw() + theme(panel_grid_major=element_blank(),panel_grid_minor=element_blank(),panel_border=element_blank(),panel_background=element_blank())+ labs(x="Insurance Charges", title="Density plot of Insurance Charges"))
-
-fig = g_1.draw()
-plt.show()
-```
-
-
-```{python}
 from plotnine import ggplot, aes, geom_density, theme_bw, theme, element_blank, labs
 import matplotlib.pyplot as plt
 

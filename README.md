@@ -1,8 +1,5 @@
-# Machine Learning Final Project - Predicting Healthcare Insurance
-Expenses with Machine Learning
-
-
 # Predicting Healthcare Insurance Expenses with Machine Learning
+
 
 ## Overview
 
@@ -93,41 +90,21 @@ Several visualizations were used to better understand the data:
   Charges are heavily right-skewed, with most values below \$20,000 and
   a smaller number of high-cost outliers.
 
-``` python
-from plotnine import ggplot, aes, geom_density, theme_bw, theme, element_blank, labs
-import matplotlib.pyplot as plt
-
-g_1 = (
-    ggplot(df, aes(x="expenses")) +
-    geom_density(fill="blue", alpha=0.3) +
-    theme_bw() +
-    theme(
-        panel_grid_major=element_blank(),
-        panel_grid_minor=element_blank(),
-        panel_border=element_blank(),
-        panel_background=element_blank()
-    ) +
-    labs(x="Insurance Charges", title="Density plot of Insurance Charges")
-)
-
-g_1
-```
-
-<img src="README_files/figure-commonmark/cell-5-output-1.png"
+<img src="README_files/figure-commonmark/cell-4-output-1.png"
 width="336" height="240" />
 
 - **Expenses by gender (log scale)**  
   Female charges cluster more tightly around the mean, while males
   account for more extreme values.
 
-<img src="README_files/figure-commonmark/cell-6-output-1.png"
+<img src="README_files/figure-commonmark/cell-5-output-1.png"
 width="336" height="240" />
 
 - **Age vs. expenses split by smoking status**  
   Expenses increase with age, and smokers consistently exhibit
   significantly higher costs across age groups.
 
-<img src="README_files/figure-commonmark/cell-7-output-1.png"
+<img src="README_files/figure-commonmark/cell-6-output-1.png"
 width="336" height="240" />
 
 These trends motivated the use of a nonlinear model in addition to
@@ -204,7 +181,7 @@ XGBoost significantly outperformed linear regression across all metrics.
 To understand model behavior, feature importance metrics and **SHAP
 (SHapley Additive exPlanations)** values were analyzed.
 
-![](README_files/figure-commonmark/cell-10-output-1.png)
+![](README_files/figure-commonmark/cell-9-output-1.png)
 
 ### Key Feature Importance Insights
 
